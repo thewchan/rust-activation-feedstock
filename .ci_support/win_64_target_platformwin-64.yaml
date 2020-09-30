@@ -1,0 +1,15 @@
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cross_target_platform:
+- win-64
+rust_arch:
+- x86_64-pc-windows-msvc
+target_platform:
+- win-64
+vc:
+- '14'
+zip_keys:
+- - cross_target_platform
+  - rust_arch
