@@ -1,15 +1,23 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cross_target_platform:
-- linux-64
+- linux-aarch64
 docker_image:
 - condaforge/linux-anvil-comp7
 rust_arch:
-- x86_64-unknown-linux-gnu
+- aarch64-unknown-linux-gnu
+rust_arch_env:
+- AARCH64_UNKNOWN_LINUX_GNU
+rust_default_cc:
+- aarch64-conda-linux-gnu-cc
 target_platform:
 - linux-64
 zip_keys:
 - - cross_target_platform
   - rust_arch
+  - rust_arch_env
+  - rust_default_cc

@@ -5,17 +5,17 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cross_target_platform:
-- win-64
+- linux-ppc64le
+docker_image:
+- condaforge/linux-anvil-comp7
 rust_arch:
-- x86_64-pc-windows-msvc
+- powerpc64le-unknown-linux-gnu
 rust_arch_env:
-- X86_64_PC_WINDOWS_MSVC
+- POWERPC64LE_UNKNOWN_LINUX_GNU
 rust_default_cc:
-- x86_64-pc-windows-msvc19.14.26423
+- powerpc64le-conda-linux-gnu-cc
 target_platform:
-- win-64
-vc:
-- '14'
+- linux-64
 zip_keys:
 - - cross_target_platform
   - rust_arch

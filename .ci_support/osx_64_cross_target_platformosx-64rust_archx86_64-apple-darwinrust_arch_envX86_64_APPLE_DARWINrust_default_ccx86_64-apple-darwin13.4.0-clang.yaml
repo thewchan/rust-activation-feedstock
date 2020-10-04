@@ -10,8 +10,14 @@ macos_machine:
 - x86_64-apple-darwin13.4.0
 rust_arch:
 - x86_64-apple-darwin
+rust_arch_env:
+- X86_64_APPLE_DARWIN
+rust_default_cc:
+- x86_64-apple-darwin13.4.0-clang
 target_platform:
 - osx-64
 zip_keys:
 - - cross_target_platform
   - rust_arch
+  - rust_arch_env
+  - rust_default_cc
