@@ -17,8 +17,6 @@ outputs:
     script: bld.bat  # [win]
     build:
       skip: True  # [win and vc<14]
-      # TODO: remove this in the feedstock
-      skip: True  # [cross_target_platform == "osx-64" and linux]
       # TODO: need more work to pass the LDFLAGS and need to use clang-cl
       skip: True  # [cross_target_platform == "win-64" and unix]
     requirements:
@@ -37,6 +35,7 @@ outputs:
 {% endif %}
     test:
       commands:
+        - echo {{ MACOSX_DEPLOYMENT_TARGET }}-{{ rust_arch_env }}-{{ rust_default_cc }}
         - set "REQUESTS_CA_BUNDLE="  # [win]
         - set "SSL_CERT_FILE="       # [win]
         - unset REQUESTS_CA_BUNDLE  # [unix]
