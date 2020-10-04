@@ -34,6 +34,8 @@ outputs:
         - vs2017_{{ cross_target_platform }}   # [win]
 {% endif %}
     test:
+      requires:
+        - file
       commands:
         - echo {{ MACOSX_DEPLOYMENT_TARGET }}-{{ rust_arch_env }}-{{ rust_default_cc }}
         - set "REQUESTS_CA_BUNDLE="  # [win]
