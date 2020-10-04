@@ -22,6 +22,8 @@ rust_default_cc:
   - powerpc64le-conda-linux-gnu-cc      # [linux64 or ppc64le]
   - x86_64-apple-darwin13.4.0-clang     # [linux64 or (osx and x86_64)]
   - x86_64-pc-windows-msvc19.14.26423   # [linux64 or (osx and x86_64) or win64]
+MACOSX_DEPLOYMENT_TARGET:
+  - 10.9
 zip_keys:
   - - cross_target_platform
     - rust_arch
