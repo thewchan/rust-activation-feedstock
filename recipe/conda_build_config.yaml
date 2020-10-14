@@ -33,10 +33,10 @@ version:
   - 1.49.0.dev20201014
 channel_sources:
   - conda-forge
-  - conda-forge/label/dev
+  - conda-forge/label/rust_dev,conda-forge
 channel_targets:
   - conda-forge main
-  - conda-forge dev
+  - conda-forge rust_dev
 zip_keys:
   - - cross_target_platform
     - rust_arch
