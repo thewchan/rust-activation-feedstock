@@ -1,4 +1,6 @@
+{% if version is undefined %}
 {% set version = "1.46.0" %}
+{% endif %}
 
 {% if cross_target_platform is undefined %}
 {% set cross_target_platform = "foo" %}
@@ -10,6 +12,7 @@ package:
 
 build:
   number: 0
+  skip: True   # [osx and arm64 and version == "1.46.0"]
 
 outputs:
   - name: rust_{{ cross_target_platform }}
