@@ -1,0 +1,34 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+cdt_arch:
+- aarch64
+cdt_name:
+- cos7
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cross_target_platform:
+- linux-aarch64
+docker_image:
+- condaforge/linux-anvil-aarch64
+rust_arch:
+- aarch64-unknown-linux-gnu
+rust_arch_env:
+- AARCH64_UNKNOWN_LINUX_GNU
+rust_default_cc:
+- aarch64-conda-linux-gnu-cc
+target_platform:
+- linux-aarch64
+version:
+- 1.46.0
+zip_keys:
+- - cross_target_platform
+  - rust_arch
+  - rust_arch_env
+  - rust_default_cc
+- - version
+  - channel_sources
+  - channel_targets

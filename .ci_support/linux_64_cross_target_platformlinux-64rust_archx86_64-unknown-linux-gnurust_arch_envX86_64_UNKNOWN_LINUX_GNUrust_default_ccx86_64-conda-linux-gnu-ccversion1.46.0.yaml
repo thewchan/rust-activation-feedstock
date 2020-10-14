@@ -1,7 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 cross_target_platform:
@@ -16,8 +16,13 @@ rust_default_cc:
 - x86_64-conda-linux-gnu-cc
 target_platform:
 - linux-64
+version:
+- 1.46.0
 zip_keys:
 - - cross_target_platform
   - rust_arch
   - rust_arch_env
   - rust_default_cc
+- - version
+  - channel_sources
+  - channel_targets

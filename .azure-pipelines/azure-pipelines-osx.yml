@@ -8,10 +8,18 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      ? osx_64_cross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clang
-      : CONFIG: osx_64_cross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clang
+      ? osx_64_cross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.46.0
+      : CONFIG: osx_64_cross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.46.0
         UPLOAD_PACKAGES: 'True'
-    maxParallel: 8
+      ? osx_64_cross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.49.0.dev20201014
+      : CONFIG: osx_64_cross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.49.0.dev20201014
+        UPLOAD_PACKAGES: 'True'
+      ? osx_64_cross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.46.0
+      : CONFIG: osx_64_cross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.46.0
+        UPLOAD_PACKAGES: 'True'
+      ? osx_64_cross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.49.0.dev20201014
+      : CONFIG: osx_64_cross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.49.0.dev20201014
+        UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
   steps:
