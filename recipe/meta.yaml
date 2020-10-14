@@ -12,7 +12,7 @@ package:
 
 build:
   number: 0
-  skip: True   # [osx and arm64 and version == "1.46.0"]
+  skip: True  # [cross_target_platform == "osx-arm64" and version == "1.46.0"]
 
 outputs:
   - name: rust_{{ cross_target_platform }}
@@ -22,6 +22,7 @@ outputs:
       skip: True  # [win and vc<14]
       # TODO: need more work to pass the LDFLAGS and need to use clang-cl
       skip: True  # [cross_target_platform == "win-64" and unix]
+      skip: True  # [cross_target_platform == "osx-arm64" and version == "1.46.0"]
     requirements:
       host:
         - rust-std-{{ rust_arch }}
@@ -59,6 +60,7 @@ outputs:
     script: bld.bat
     build:
       skip: True  # [not win]
+      skip: True  # [cross_target_platform == "osx-arm64" and version == "1.46.0"]
     requirements:
       run:
         - rust-gnu  {{ version }}.*
