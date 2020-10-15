@@ -175,17 +175,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_target_platformwin-64version1.46.0</td>
+              <td>win_64_version1.46.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=win&configuration=win_64_target_platformwin-64version1.46.0" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=win&configuration=win_64_version1.46.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_target_platformwin-64version1.49.0.dev20201014</td>
+              <td>win_64_version1.49.0.dev20201014</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=win&configuration=win_64_target_platformwin-64version1.49.0.dev20201014" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=win&configuration=win_64_version1.49.0.dev20201014" alt="variant">
                 </a>
               </td>
             </tr>
