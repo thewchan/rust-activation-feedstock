@@ -37,6 +37,7 @@ outputs:
         - clang_{{ cross_target_platform }}    # [unix]
         - vs2017_{{ cross_target_platform }}   # [win]
 {% endif %}
+        - ld64_{{ target_platform }}  # [osx]
     test:
       requires:
         - file  # [unix]
