@@ -61,6 +61,7 @@ outputs:
     build:
       skip: True  # [not win]
       skip: True  # [cross_target_platform == "osx-arm64" and version == "1.46.0"]
+      skip: True
     requirements:
       run:
         - rust-gnu  {{ version }}.*
