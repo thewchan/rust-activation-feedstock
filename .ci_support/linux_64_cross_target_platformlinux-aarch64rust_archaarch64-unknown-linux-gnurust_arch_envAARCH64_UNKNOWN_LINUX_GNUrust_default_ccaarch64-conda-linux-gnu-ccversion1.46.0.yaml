@@ -12,8 +12,12 @@ rust_arch:
 - aarch64-unknown-linux-gnu
 rust_arch_env:
 - AARCH64_UNKNOWN_LINUX_GNU
+rust_arch_env_build:
+- X86_64_UNKNOWN_LINUX_GNU
 rust_default_cc:
 - aarch64-conda-linux-gnu-cc
+rust_default_cc_build:
+- x86_64-conda-linux-gnu-cc
 target_platform:
 - linux-64
 version:

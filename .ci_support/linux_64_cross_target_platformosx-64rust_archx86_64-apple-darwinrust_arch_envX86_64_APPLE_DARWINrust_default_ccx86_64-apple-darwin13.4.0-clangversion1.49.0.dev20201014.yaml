@@ -12,8 +12,12 @@ rust_arch:
 - x86_64-apple-darwin
 rust_arch_env:
 - X86_64_APPLE_DARWIN
+rust_arch_env_build:
+- X86_64_UNKNOWN_LINUX_GNU
 rust_default_cc:
 - x86_64-apple-darwin13.4.0-clang
+rust_default_cc_build:
+- x86_64-conda-linux-gnu-cc
 target_platform:
 - linux-64
 version:
