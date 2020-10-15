@@ -12,6 +12,13 @@ rust_arch:
   - x86_64-apple-darwin                 # [linux64 or (osx and x86_64)]
   - aarch64-apple-darwin                # [linux64 or (osx and x86_64)]
   - x86_64-pc-windows-msvc              # [linux64 or (osx and x86_64) or win64]
+rust_arch_env_build:
+  - X86_64_UNKNOWN_LINUX_GNU            # [linux64]
+  - AARCH64_UNKNOWN_LINUX_GNU           # [aarch64]
+  - POWERPC64LE_UNKNOWN_LINUX_GNU       # [ppc64le]
+  - X86_64_APPLE_DARWIN                 # [osx and x86_64]
+  - AARCH64_APPLE_DARWIN                # [osx and arm64]
+  - X86_64_PC_WINDOWS_MSVC              # [win64]
 rust_arch_env:
   - X86_64_UNKNOWN_LINUX_GNU            # [linux64]
   - AARCH64_UNKNOWN_LINUX_GNU           # [linux64 or aarch64]
@@ -19,13 +26,20 @@ rust_arch_env:
   - X86_64_APPLE_DARWIN                 # [linux64 or (osx and x86_64)]
   - AARCH64_APPLE_DARWIN                # [linux64 or (osx and x86_64)]
   - X86_64_PC_WINDOWS_MSVC              # [linux64 or (osx and x86_64) or win64]
+rust_default_cc_build:
+  - x86_64-conda-linux-gnu-cc           # [linux64]
+  - aarch64-conda-linux-gnu-cc          # [aarch64]
+  - powerpc64le-conda-linux-gnu-cc      # [ppc64le]
+  - x86_64-apple-darwin13.4.0-clang     # [osx and x86_64]
+  - arm64-apple-darwin20.0.0-clang      # [osx and arm64]
+  - clang-cl                            # [win64]
 rust_default_cc:
   - x86_64-conda-linux-gnu-cc           # [linux64]
   - aarch64-conda-linux-gnu-cc          # [linux64 or aarch64]
   - powerpc64le-conda-linux-gnu-cc      # [linux64 or ppc64le]
   - x86_64-apple-darwin13.4.0-clang     # [linux64 or (osx and x86_64)]
   - arm64-apple-darwin20.0.0-clang      # [linux64 or (osx and x86_64)]
-  - x86_64-pc-windows-msvc19.14.26423   # [linux64 or (osx and x86_64) or win64]
+  - clang-cl                            # [linux64 or (osx and x86_64) or win64]
 MACOSX_SDK_VERSION:   # [osx]
   - 11.0              # [osx]
 MACOSX_DEPLOYMENT_TARGET:

@@ -41,7 +41,7 @@ outputs:
       requires:
         - file  # [unix]
       commands:
-        - echo {{ MACOSX_DEPLOYMENT_TARGET }}-{{ rust_arch_env }}-{{ rust_default_cc }}
+        - echo {{ MACOSX_DEPLOYMENT_TARGET }}-{{ rust_arch_env }}-{{ rust_default_cc }}-{{ rust_arch_env_build }}-{{ rust_default_cc_build }}
         - set "REQUESTS_CA_BUNDLE="  # [win]
         - set "SSL_CERT_FILE="       # [win]
         - unset REQUESTS_CA_BUNDLE  # [unix]
