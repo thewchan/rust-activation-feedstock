@@ -1,0 +1,32 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cross_target_platform:
+- linux-ppc64le
+docker_image:
+- condaforge/linux-anvil-ppc64le
+rust_arch:
+- powerpc64le-unknown-linux-gnu
+rust_arch_env:
+- POWERPC64LE_UNKNOWN_LINUX_GNU
+rust_arch_env_build:
+- POWERPC64LE_UNKNOWN_LINUX_GNU
+rust_default_cc:
+- powerpc64le-conda-linux-gnu-cc
+rust_default_cc_build:
+- powerpc64le-conda-linux-gnu-cc
+target_platform:
+- linux-ppc64le
+version:
+- 1.46.0
+zip_keys:
+- - cross_target_platform
+  - rust_arch
+  - rust_arch_env
+  - rust_default_cc
+- - version
+  - channel_sources
+  - channel_targets

@@ -1,4 +1,6 @@
+{% if version is undefined %}
 {% set version = "1.46.0" %}
+{% endif %}
 
 {% if cross_target_platform is undefined %}
 {% set cross_target_platform = "foo" %}
@@ -10,6 +12,7 @@ package:
 
 build:
   number: 0
+  skip: True  # [cross_target_platform == "osx-arm64" and version == "1.46.0"]
 
 outputs:
   - name: rust_{{ cross_target_platform }}
@@ -19,6 +22,7 @@ outputs:
       skip: True  # [win and vc<14]
       # TODO: need more work to pass the LDFLAGS and need to use clang-cl
       skip: True  # [cross_target_platform == "win-64" and unix]
+      skip: True  # [cross_target_platform == "osx-arm64" and version == "1.46.0"]
     requirements:
       host:
         - rust-std-{{ rust_arch }}
@@ -33,11 +37,12 @@ outputs:
         - clang_{{ cross_target_platform }}    # [unix]
         - vs2017_{{ cross_target_platform }}   # [win]
 {% endif %}
+        - ld64_{{ target_platform }}  # [osx]
     test:
       requires:
         - file  # [unix]
       commands:
-        - echo {{ MACOSX_DEPLOYMENT_TARGET }}-{{ rust_arch_env }}-{{ rust_default_cc }}
+        - echo {{ MACOSX_DEPLOYMENT_TARGET }}-{{ rust_arch_env }}-{{ rust_default_cc }}-{{ rust_arch_env_build }}-{{ rust_default_cc_build }}
         - set "REQUESTS_CA_BUNDLE="  # [win]
         - set "SSL_CERT_FILE="       # [win]
         - unset REQUESTS_CA_BUNDLE  # [unix]
@@ -45,8 +50,11 @@ outputs:
         - rustc --help
         - rustdoc --help
         - cargo --help
+        # Can't test osx-arm64 on Linux because we can't get the SDK
+        - exit 0                    # [linux and cross_target_platform == "osx-arm64"]
         - cargo install --force xsv
         - file $PREFIX/.cargo/bin/xsv  # [unix]
+        - file $PREFIX/.cargo/bin/xsv | grep "Mach-O 64-bit arm64 executable"  # [unix and cross_target_platform == "osx-arm64"]
         - file $PREFIX/.cargo/bin/xsv | grep "Mach-O 64-bit x86_64 executable"  # [unix and cross_target_platform == "osx-64"]
         - file $PREFIX/.cargo/bin/xsv | grep "ELF 64-bit LSB pie executable, x86-64"  # [unix and cross_target_platform == "linux-64"]
         - file $PREFIX/.cargo/bin/xsv | grep "ELF 64-bit LSB pie executable, ARM aarch64"  # [unix and cross_target_platform == "linux-aarch64"]
@@ -56,6 +64,8 @@ outputs:
     script: bld.bat
     build:
       skip: True  # [not win]
+      skip: True  # [cross_target_platform == "osx-arm64" and version == "1.46.0"]
+      skip: True
     requirements:
       run:
         - rust-gnu  {{ version }}.*

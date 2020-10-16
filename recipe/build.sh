@@ -4,6 +4,8 @@ set -x
 
 mkdir -p ${PREFIX}/etc/conda/{de,}activate.d
 cp "${RECIPE_DIR}"/activate.sh activate.sh
+sed -i.bak "s/@rust_arch_env_build@/$rust_arch_env_build/g" activate.sh
+sed -i.bak "s/@rust_default_cc_build@/$rust_default_cc_build/g" activate.sh
 sed -i.bak "s/@rust_arch@/$rust_arch/g" activate.sh
 sed -i.bak "s/@rust_arch_env@/$rust_arch_env/g" activate.sh
 sed -i.bak "s/@rust_default_cc@/$rust_default_cc/g" activate.sh

@@ -1,23 +1,32 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 channel_sources:
-- conda-forge,defaults
+- conda-forge/label/rust_dev,conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge rust_dev
 cross_target_platform:
 - osx-64
-macos_machine:
-- x86_64-apple-darwin13.4.0
+docker_image:
+- condaforge/linux-anvil-comp7
 rust_arch:
 - x86_64-apple-darwin
 rust_arch_env:
 - X86_64_APPLE_DARWIN
+rust_arch_env_build:
+- X86_64_UNKNOWN_LINUX_GNU
 rust_default_cc:
 - x86_64-apple-darwin13.4.0-clang
+rust_default_cc_build:
+- x86_64-conda-linux-gnu-cc
 target_platform:
-- osx-64
+- linux-64
+version:
+- 1.49.0.dev20201014
 zip_keys:
 - - cross_target_platform
   - rust_arch
   - rust_arch_env
   - rust_default_cc
+- - version
+  - channel_sources
+  - channel_targets
