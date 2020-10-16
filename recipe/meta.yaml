@@ -55,6 +55,7 @@ outputs:
         - exit 0                    # [linux and cross_target_platform == "osx-arm64"]
         - cargo install --force xsv
         - file $PREFIX/.cargo/bin/xsv  # [unix]
+        - file $PREFIX/.cargo/bin/xsv | grep "Mach-O 64-bit arm64 executable"  # [unix and cross_target_platform == "osx-arm64"]
         - file $PREFIX/.cargo/bin/xsv | grep "Mach-O 64-bit x86_64 executable"  # [unix and cross_target_platform == "osx-64"]
         - file $PREFIX/.cargo/bin/xsv | grep "ELF 64-bit LSB pie executable, x86-64"  # [unix and cross_target_platform == "linux-64"]
         - file $PREFIX/.cargo/bin/xsv | grep "ELF 64-bit LSB pie executable, ARM aarch64"  # [unix and cross_target_platform == "linux-aarch64"]
