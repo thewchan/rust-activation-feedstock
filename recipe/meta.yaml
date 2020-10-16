@@ -51,7 +51,6 @@ outputs:
         - rustc --help
         - rustdoc --help
         - cargo --help
-        - ln -s $PREFIX/bin/clang $PREFIX/bin/x86_64-apple-darwin13.4.0-clang || true
         # Can't test osx-arm64 on Linux because we can't get the SDK
         - exit 0                    # [linux and cross_target_platform == "osx-arm64"]
         - cargo install --force xsv
