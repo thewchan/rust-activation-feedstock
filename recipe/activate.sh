@@ -6,7 +6,7 @@ export RUSTUP_HOME=${CARGO_HOME}/rustup
 
 [[ -d ${CARGO_HOME} ]] || mkdir -p ${CARGO_HOME}
 
-export CARGO_TARGET_@rust_arch_env_build@_LINKER=${CONDA_PREFIX}/bin/@rust_default_cc_build@
+export CARGO_TARGET_@rust_arch_env_build@_LINKER=${CC_FOR_BUILD:-${CONDA_PREFIX}/bin/@rust_default_cc_build@}
 export CARGO_TARGET_@rust_arch_env@_LINKER=${CC:-${CONDA_PREFIX}/bin/@rust_default_cc@}
 export CARGO_BUILD_TARGET=@rust_arch@
 
