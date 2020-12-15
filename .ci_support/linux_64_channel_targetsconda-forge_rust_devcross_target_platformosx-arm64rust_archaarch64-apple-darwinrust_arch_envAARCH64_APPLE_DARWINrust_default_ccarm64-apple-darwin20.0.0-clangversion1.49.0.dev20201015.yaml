@@ -1,27 +1,29 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
+cdt_name:
+- cos6
 channel_sources:
 - conda-forge/label/rust_dev,conda-forge
 channel_targets:
 - conda-forge rust_dev
 cross_target_platform:
-- linux-ppc64le
+- osx-arm64
 docker_image:
-- condaforge/linux-anvil-comp7
+- quay.io/condaforge/linux-anvil-comp7
 rust_arch:
-- powerpc64le-unknown-linux-gnu
+- aarch64-apple-darwin
 rust_arch_env:
-- POWERPC64LE_UNKNOWN_LINUX_GNU
+- AARCH64_APPLE_DARWIN
 rust_arch_env_build:
 - X86_64_UNKNOWN_LINUX_GNU
 rust_default_cc:
-- powerpc64le-conda-linux-gnu-cc
+- arm64-apple-darwin20.0.0-clang
 rust_default_cc_build:
 - x86_64-conda-linux-gnu-cc
 target_platform:
 - linux-64
 version:
-- 1.49.0.dev20201014
+- 1.49.0.dev20201015
 zip_keys:
 - - cross_target_platform
   - rust_arch

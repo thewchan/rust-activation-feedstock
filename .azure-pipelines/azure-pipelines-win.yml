@@ -8,11 +8,11 @@ jobs:
     vmImage: vs2017-win2016
   strategy:
     matrix:
-      win_64_version1.46.0:
-        CONFIG: win_64_version1.46.0
+      win_64_channel_targetsconda-forge_mainversion1.46.0:
+        CONFIG: win_64_channel_targetsconda-forge_mainversion1.46.0
         UPLOAD_PACKAGES: 'True'
-      win_64_version1.49.0.dev20201014:
-        CONFIG: win_64_version1.49.0.dev20201014
+      win_64_channel_targetsconda-forge_rust_devversion1.49.0.dev20201015:
+        CONFIG: win_64_channel_targetsconda-forge_rust_devversion1.49.0.dev20201015
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:
