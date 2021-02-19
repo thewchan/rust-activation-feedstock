@@ -45,6 +45,7 @@ MACOSX_SDK_VERSION:
 MACOSX_DEPLOYMENT_TARGET:
   - 10.9
 version:
+  - 1.48.0
   - 1.49.0
   - 1.49.0.dev20201015
 channel_sources:
