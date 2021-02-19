@@ -27,6 +27,8 @@ target_platform:
 version:
 - 1.49.0
 zip_keys:
+- - cdt_name
+  - docker_image
 - - cross_target_platform
   - rust_arch
   - rust_arch_env
