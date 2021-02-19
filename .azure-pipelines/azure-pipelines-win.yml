@@ -8,6 +8,9 @@ jobs:
     vmImage: vs2017-win2016
   strategy:
     matrix:
+      win_64_channel_targetsconda-forge_mainversion1.48.0:
+        CONFIG: win_64_channel_targetsconda-forge_mainversion1.48.0
+        UPLOAD_PACKAGES: 'True'
       win_64_channel_targetsconda-forge_mainversion1.49.0:
         CONFIG: win_64_channel_targetsconda-forge_mainversion1.49.0
         UPLOAD_PACKAGES: 'True'
