@@ -41,22 +41,12 @@ rust_default_cc:
   - arm64-apple-darwin20.0.0-clang      # [linux64 or (osx and x86_64) or (osx and arm64)]
   - clang-cl                            # [linux64 or (osx and x86_64) or win64]
 MACOSX_SDK_VERSION:
-  - 0                                   # [linux64]
-  - 0                                   # [linux64 or aarch64]
-  - 0                                   # [linux64 or ppc64le]
-  - 10.9                                # [linux64 or (osx and x86_64)]
-  - 11.0                                # [linux64 or (osx and x86_64) or (osx and arm64)]
-  - 0                                   # [linux64 or (osx and x86_64) or win64]
+  - 11.0
 MACOSX_DEPLOYMENT_TARGET:
-  - 0                                   # [linux64]
-  - 0                                   # [linux64 or aarch64]
-  - 0                                   # [linux64 or ppc64le]
-  - 10.9                                # [linux64 or (osx and x86_64)]
-  - 11.0                                # [linux64 or (osx and x86_64) or (osx and arm64)]
-  - 0                                   # [linux64 or (osx and x86_64) or win64]
+  - 10.9
 version:
   - 1.46.0
-  - 1.49.0
+  - 1.50.0
   - 1.49.0.dev20201015
 channel_sources:
   - conda-forge
@@ -71,8 +61,6 @@ zip_keys:
     - rust_arch
     - rust_arch_env
     - rust_default_cc
-    - MACOSX_SDK_VERSION
-    - MACOSX_DEPLOYMENT_TARGET
   - - version
     - channel_sources
     - channel_targets
