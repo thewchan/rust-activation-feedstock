@@ -7,23 +7,23 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cross_target_platform:
-- osx-arm64
-macos_machine:
-- x86_64-apple-darwin13.4.0
+- win-64
 rust_arch:
-- aarch64-apple-darwin
+- x86_64-pc-windows-msvc
 rust_arch_env:
-- AARCH64_APPLE_DARWIN
+- X86_64_PC_WINDOWS_MSVC
 rust_arch_env_build:
-- X86_64_APPLE_DARWIN
+- X86_64_PC_WINDOWS_MSVC
 rust_default_cc:
-- arm64-apple-darwin20.0.0-clang
+- clang-cl
 rust_default_cc_build:
-- x86_64-apple-darwin13.4.0-clang
+- clang-cl
 target_platform:
-- osx-64
+- win-64
+vc:
+- '14'
 version:
-- 1.49.0
+- 1.50.0
 zip_keys:
 - - cross_target_platform
   - rust_arch
