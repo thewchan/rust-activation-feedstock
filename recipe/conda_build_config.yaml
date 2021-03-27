@@ -43,11 +43,20 @@ rust_default_cc:
 
 # This should be max(build_platform_ver, cross_target_platform_ver)
 MACOSX_SDK_VERSION:
-  - 11.0
+  - 0                                   # [linux64]
+  - 0                                   # [linux64 or aarch64]
+  - 0                                   # [linux64 or ppc64le]
+  - 10.9                                # [linux64 or (osx and x86_64)]
+  - 11.0                                # [linux64 or (osx and x86_64) or (osx and arm64)]
+  - 0                                   # [linux64 or (osx and x86_64) or win64]
 # This should match cross_target_platform_ver
-# Due to a conda-smithy bug we keep it 10.9 even for osx-arm64
 MACOSX_DEPLOYMENT_TARGET:
-  - 10.9
+  - 0                                   # [linux64]
+  - 0                                   # [linux64 or aarch64]
+  - 0                                   # [linux64 or ppc64le]
+  - 10.9                                # [linux64 or (osx and x86_64)]
+  - 11.0                                # [linux64 or (osx and x86_64) or (osx and arm64)]
+  - 0                                   # [linux64 or (osx and x86_64) or win64]
 version:
   - 1.46.0
   - 1.51.0
@@ -65,6 +74,8 @@ zip_keys:
     - rust_arch
     - rust_arch_env
     - rust_default_cc
+    - MACOSX_SDK_VERSION
+    - MACOSX_DEPLOYMENT_TARGET
   - - version
     - channel_sources
     - channel_targets
