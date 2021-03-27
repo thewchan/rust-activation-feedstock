@@ -31,7 +31,7 @@ steps:
 
 ---
 kind: pipeline
-name: linux_aarch64_channel_targetsconda-_hac5d9bb988
+name: linux_aarch64_channel_targetsconda-_h0f53f9c2a3
 
 platform:
   os: linux
@@ -41,7 +41,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_channel_targetsconda-forge_mainversion1.49.0
+    CONFIG: linux_aarch64_channel_targetsconda-forge_mainversion1.51.0
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
