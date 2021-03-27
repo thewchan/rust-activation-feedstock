@@ -2,7 +2,7 @@
 
 source .scripts/logging_utils.sh
 
-set -x
+set -xe
 
 startgroup "Installing a fresh version of Miniforge"
 MINIFORGE_URL="https://github.com/conda-forge/miniforge/releases/latest/download"
@@ -35,8 +35,6 @@ source run_conda_forge_build_setup
 
 
 endgroup "Configuring conda"
-
-set -e
 
 startgroup "Running conda $BUILD_CMD"
 echo -e "\n\nMaking the build clobber file"
