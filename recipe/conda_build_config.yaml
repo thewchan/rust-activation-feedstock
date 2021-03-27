@@ -50,7 +50,7 @@ MACOSX_DEPLOYMENT_TARGET:
   - 10.9
 version:
   - 1.46.0
-  - 1.49.0
+  - 1.51.0
   - 1.49.0.dev20201015
 channel_sources:
   - conda-forge
