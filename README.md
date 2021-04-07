@@ -300,6 +300,7 @@ Installing `rust-activation` from the `conda-forge` channel can be achieved by a
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `rust-gnu_linux-64, rust_linux-64, rust_linux-aarch64, rust_linux-ppc64le, rust_osx-64, rust_osx-arm64, rust_win-64` can be installed with:
