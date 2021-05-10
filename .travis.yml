@@ -17,11 +17,6 @@ matrix:
       arch: ppc64le
       dist: focal
 
-    - env: CONFIG=linux_ppc64le_channel_targetsconda-forge_rust_devversion1.49.0.dev20201015 UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=quay.io/condaforge/linux-anvil-ppc64le
-      os: linux
-      arch: ppc64le
-      dist: focal
-
     - env: CONFIG=linux_ppc64le_channel_targetsconda-forge_rust_devversion1.53.0.dev20210324 UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=quay.io/condaforge/linux-anvil-ppc64le
       os: linux
       arch: ppc64le
