@@ -63,10 +63,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_MACOSX_DEPLOYMENT_TARGET0c_h52a5391bf7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=linux&configuration=linux_64_MACOSX_DEPLOYMENT_TARGET0c_h52a5391bf7" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_MACOSX_DEPLOYMENT_TARGET0c_h8168fe3df0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=linux&configuration=linux_64_MACOSX_DEPLOYMENT_TARGET0c_h8168fe3df0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_MACOSX_DEPLOYMENT_TARGET0c_h9c370c3375</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=linux&configuration=linux_64_MACOSX_DEPLOYMENT_TARGET0c_h9c370c3375" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_MACOSX_DEPLOYMENT_TARGET0c_ha5555cecbe</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=linux&configuration=linux_64_MACOSX_DEPLOYMENT_TARGET0c_ha5555cecbe" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -133,6 +154,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_MACOSX_DEPLOYMENT_TARGET10_h8f216008d8</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=linux&configuration=linux_64_MACOSX_DEPLOYMENT_TARGET10_h8f216008d8" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_MACOSX_DEPLOYMENT_TARGET11.0channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.46.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
@@ -144,6 +172,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=linux&configuration=linux_64_MACOSX_DEPLOYMENT_TARGET11.0channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.51.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_MACOSX_DEPLOYMENT_TARGET11_h23f7825017</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=linux&configuration=linux_64_MACOSX_DEPLOYMENT_TARGET11_h23f7825017" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -175,6 +210,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64_channel_targetsconda-forge_rust_devversion1.53.0.dev20210324</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_channel_targetsconda-forge_rust_devversion1.53.0.dev20210324" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_ppc64le_channel_targetsconda-forge_mainversion1.46.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
@@ -196,10 +238,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_ppc64le_channel_targetsconda-forge_rust_devversion1.53.0.dev20210324</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_channel_targetsconda-forge_rust_devversion1.53.0.dev20210324" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_MACOSX_DEPLOYMENT_TARGET10.9_h2529c051f0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=osx&configuration=osx_64_MACOSX_DEPLOYMENT_TARGET10.9_h2529c051f0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_MACOSX_DEPLOYMENT_TARGET10.9_h852b5d5ab7</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=osx&configuration=osx_64_MACOSX_DEPLOYMENT_TARGET10.9_h852b5d5ab7" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -214,6 +270,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=osx&configuration=osx_64_MACOSX_DEPLOYMENT_TARGET10.9channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.51.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_MACOSX_DEPLOYMENT_TARGET11.0_hba1ccaed65</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=osx&configuration=osx_64_MACOSX_DEPLOYMENT_TARGET11.0_hba1ccaed65" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -252,6 +315,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_arm64_channel_targetsconda-forge_rust_devversion1.53.0.dev20210324</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_channel_targetsconda-forge_rust_devversion1.53.0.dev20210324" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>win_64_channel_targetsconda-forge_mainversion1.46.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
@@ -270,6 +340,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=win&configuration=win_64_channel_targetsconda-forge_rust_devversion1.49.0.dev20201015" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_channel_targetsconda-forge_rust_devversion1.53.0.dev20210324</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10833&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rust-activation-feedstock?branchName=master&jobName=win&configuration=win_64_channel_targetsconda-forge_rust_devversion1.53.0.dev20210324" alt="variant">
                 </a>
               </td>
             </tr>

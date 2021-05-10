@@ -16,8 +16,20 @@ jobs:
         CONFIG: linux_64_MACOSX_DEPLOYMENT_TARGET0c_h305304f77f
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+      linux_64_MACOSX_DEPLOYMENT_TARGET0c_h52a5391bf7:
+        CONFIG: linux_64_MACOSX_DEPLOYMENT_TARGET0c_h52a5391bf7
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+      linux_64_MACOSX_DEPLOYMENT_TARGET0c_h8168fe3df0:
+        CONFIG: linux_64_MACOSX_DEPLOYMENT_TARGET0c_h8168fe3df0
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
       linux_64_MACOSX_DEPLOYMENT_TARGET0c_h9c370c3375:
         CONFIG: linux_64_MACOSX_DEPLOYMENT_TARGET0c_h9c370c3375
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+      linux_64_MACOSX_DEPLOYMENT_TARGET0c_ha5555cecbe:
+        CONFIG: linux_64_MACOSX_DEPLOYMENT_TARGET0c_ha5555cecbe
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
       linux_64_MACOSX_DEPLOYMENT_TARGET0c_hafc2ecdd33:
@@ -56,12 +68,20 @@ jobs:
         CONFIG: linux_64_MACOSX_DEPLOYMENT_TARGET10_h4458235462
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+      linux_64_MACOSX_DEPLOYMENT_TARGET10_h8f216008d8:
+        CONFIG: linux_64_MACOSX_DEPLOYMENT_TARGET10_h8f216008d8
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
       ? linux_64_MACOSX_DEPLOYMENT_TARGET11.0channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.46.0
       : CONFIG: linux_64_MACOSX_DEPLOYMENT_TARGET11.0channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.46.0
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
       ? linux_64_MACOSX_DEPLOYMENT_TARGET11.0channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.51.0
       : CONFIG: linux_64_MACOSX_DEPLOYMENT_TARGET11.0channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.51.0
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+      linux_64_MACOSX_DEPLOYMENT_TARGET11_h23f7825017:
+        CONFIG: linux_64_MACOSX_DEPLOYMENT_TARGET11_h23f7825017
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
       linux_64_MACOSX_DEPLOYMENT_TARGET11_hc618f5c6ad:
