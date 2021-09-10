@@ -9,23 +9,23 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cross_target_platform:
-- linux-aarch64
+- linux-64
 docker_image:
 - quay.io/condaforge/linux-anvil-comp7
 rust_arch:
-- aarch64-unknown-linux-gnu
+- x86_64-unknown-linux-gnu
 rust_arch_env:
-- AARCH64_UNKNOWN_LINUX_GNU
+- X86_64_UNKNOWN_LINUX_GNU
 rust_arch_env_build:
 - X86_64_UNKNOWN_LINUX_GNU
 rust_default_cc:
-- aarch64-conda-linux-gnu-cc
+- x86_64-conda-linux-gnu-cc
 rust_default_cc_build:
 - x86_64-conda-linux-gnu-cc
 target_platform:
 - linux-64
 version:
-- 1.46.0
+- 1.55.0
 zip_keys:
 - - cdt_name
   - docker_image

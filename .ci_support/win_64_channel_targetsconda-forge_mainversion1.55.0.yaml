@@ -23,7 +23,7 @@ target_platform:
 vc:
 - '14'
 version:
-- 1.51.0
+- 1.55.0
 zip_keys:
 - - cross_target_platform
   - rust_arch

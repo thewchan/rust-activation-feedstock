@@ -9,9 +9,9 @@ cdt_arch:
 cdt_name:
 - cos7
 channel_sources:
-- conda-forge
+- conda-forge/label/rust_dev,conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge rust_dev
 cross_target_platform:
 - linux-aarch64
 docker_image:
@@ -29,7 +29,7 @@ rust_default_cc_build:
 target_platform:
 - linux-aarch64
 version:
-- 1.51.0
+- 1.56.0.dev20210816
 zip_keys:
 - - cross_target_platform
   - rust_arch
