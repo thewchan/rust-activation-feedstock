@@ -8,14 +8,11 @@ jobs:
     vmImage: vs2017-win2016
   strategy:
     matrix:
-      win_64_channel_targetsconda-forge_mainversion1.46.0:
-        CONFIG: win_64_channel_targetsconda-forge_mainversion1.46.0
+      win_64_channel_targetsconda-forge_mainversion1.55.0:
+        CONFIG: win_64_channel_targetsconda-forge_mainversion1.55.0
         UPLOAD_PACKAGES: 'True'
-      win_64_channel_targetsconda-forge_mainversion1.51.0:
-        CONFIG: win_64_channel_targetsconda-forge_mainversion1.51.0
-        UPLOAD_PACKAGES: 'True'
-      win_64_channel_targetsconda-forge_rust_devversion1.53.0.dev20210324:
-        CONFIG: win_64_channel_targetsconda-forge_rust_devversion1.53.0.dev20210324
+      win_64_channel_targetsconda-forge_rust_devversion1.56.0.dev20210816:
+        CONFIG: win_64_channel_targetsconda-forge_rust_devversion1.56.0.dev20210816
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:
@@ -92,7 +89,7 @@ jobs:
 
     - script: |
         call activate base
-        conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
+        conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml --suppress-variables
       displayName: Build recipe
       env:
         PYTHONUNBUFFERED: 1
