@@ -11,10 +11,8 @@ package:
   version: {{ version }}
 
 build:
-  number: 1
+  number: 0
   skip: True  # [cross_target_platform == "osx-arm64" and version == "1.46.0"]
-  # Avoid rust>=1.49 for osx-64 target due to required higher deployment target.
-  skip: True  # [cross_target_platform == "osx-64" and version != "1.46.0"]
 
 outputs:
   - name: rust_{{ cross_target_platform }}
