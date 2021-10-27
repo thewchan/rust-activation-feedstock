@@ -5,9 +5,9 @@ MACOSX_SDK_VERSION:
 cdt_name:
 - cos6
 channel_sources:
-- conda-forge/label/rust_dev,conda-forge
+- conda-forge
 channel_targets:
-- conda-forge rust_dev
+- conda-forge main
 cross_target_platform:
 - linux-ppc64le
 docker_image:
