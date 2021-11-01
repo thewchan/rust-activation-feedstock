@@ -7,32 +7,17 @@ language: generic
 
 matrix:
   include:
-    - env: CONFIG=linux_ppc64le_channel_targetsconda-_hdb779c9326 UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=quay.io/condaforge/linux-anvil-ppc64le
+    - env: CONFIG=linux_ppc64le_cross_target_platformlinux-64rust_archx86_64-unknown-linux-gnurust_arch_envX86_64_UNKNOWN_LINUX_GNUrust_default_ccx86_64-conda-linux-gnu-cc UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=quay.io/condaforge/linux-anvil-ppc64le
       os: linux
       arch: ppc64le
       dist: focal
 
-    - env: CONFIG=linux_ppc64le_channel_targetsconda-forge_maincross_target_platformlinux-64rust_archx86_64-unknown-linux-gnurust_arch_envX86_64_UNKNOWN_LINUX_GNUrust_default_ccx86_64-conda-linux-gnu-ccversion1.55.0 UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=quay.io/condaforge/linux-anvil-ppc64le
+    - env: CONFIG=linux_ppc64le_cross_target_platformlinux-aarch64rust_archaarch64-unknown-linux-gnurust_arch_envAARCH64_UNKNOWN_LINUX_GNUrust_default_ccaarch64-conda-linux-gnu-cc UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=quay.io/condaforge/linux-anvil-ppc64le
       os: linux
       arch: ppc64le
       dist: focal
 
-    - env: CONFIG=linux_ppc64le_channel_targetsconda-forge_maincross_target_platformlinux-aarch64rust_archaarch64-unknown-linux-gnurust_arch_envAARCH64_UNKNOWN_LINUX_GNUrust_default_ccaarch64-conda-linux-gnu-ccversion1.55.0 UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=quay.io/condaforge/linux-anvil-ppc64le
-      os: linux
-      arch: ppc64le
-      dist: focal
-
-    - env: CONFIG=linux_ppc64le_channel_targetsconda-forge_maincross_target_platformlinux-ppc64lerust_archpowerpc64le-unknown-linux-gnurust_arch_envPOWERPC64LE_UNKNOWN_LINUX_GNUrust_default_ccpowerpc64le-conda-linux-gnu-ccversion1.55.0 UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=quay.io/condaforge/linux-anvil-ppc64le
-      os: linux
-      arch: ppc64le
-      dist: focal
-
-    - env: CONFIG=linux_ppc64le_channel_targetsconda-forge_rust_devcross_target_platformlinux-64rust_archx86_64-unknown-linux-gnurust_arch_envX86_64_UNKNOWN_LINUX_GNUrust_default_ccx86_64-conda-linux-gnu-ccversion1.56.0.dev20210816 UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=quay.io/condaforge/linux-anvil-ppc64le
-      os: linux
-      arch: ppc64le
-      dist: focal
-
-    - env: CONFIG=linux_ppc64le_channel_targetsconda-forge_rust_devcross_target_platformlinux-aarch64rust_archaarch64-unknown-linux-gnurust_arch_envAARCH64_UNKNOWN_LINUX_GNUrust_default_ccaarch64-conda-linux-gnu-ccversion1.56.0.dev20210816 UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=quay.io/condaforge/linux-anvil-ppc64le
+    - env: CONFIG=linux_ppc64le_cross_target_platformlinux-ppc64lerust_archpowerpc64le-unknown-linux-gnurust_arch_envPOWERPC64LE_UNKNOWN_LINUX_GNUrust_default_ccpowerpc64le-conda-linux-gnu-cc UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=quay.io/condaforge/linux-anvil-ppc64le
       os: linux
       arch: ppc64le
       dist: focal
@@ -41,6 +26,7 @@ script:
   - export CI=travis
   - export GIT_BRANCH="$TRAVIS_BRANCH"
   - export FEEDSTOCK_NAME=$(basename ${TRAVIS_REPO_SLUG})
+  - if [[ "${TRAVIS_PULL_REQUEST:-}" == "false" ]]; then export IS_PR_BUILD="False"; else export IS_PR_BUILD="True"; fi
 
 
-  - if [[ ${PLATFORM} =~ .*linux.* ]]; then ./.scripts/run_docker_build.sh; fi
+  - if [[ ${PLATFORM} =~ .*linux.* ]]; then CONDA_FORGE_DOCKER_RUN_ARGS=--network=host ./.scripts/run_docker_build.sh; fi

@@ -8,29 +8,17 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      osx_64_MACOSX_DEPLOYMENT_TARGET10.9_h088d61f6ff:
-        CONFIG: osx_64_MACOSX_DEPLOYMENT_TARGET10.9_h088d61f6ff
+      ? osx_64_MACOSX_DEPLOYMENT_TARGET10.9cross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clang
+      : CONFIG: osx_64_MACOSX_DEPLOYMENT_TARGET10.9cross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clang
         UPLOAD_PACKAGES: 'True'
-      ? osx_64_MACOSX_DEPLOYMENT_TARGET10.9channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.55.0
-      : CONFIG: osx_64_MACOSX_DEPLOYMENT_TARGET10.9channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.55.0
+      ? osx_64_MACOSX_DEPLOYMENT_TARGET11.0cross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clang
+      : CONFIG: osx_64_MACOSX_DEPLOYMENT_TARGET11.0cross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clang
         UPLOAD_PACKAGES: 'True'
-      osx_64_MACOSX_DEPLOYMENT_TARGET11.0_hf6cbfea6ea:
-        CONFIG: osx_64_MACOSX_DEPLOYMENT_TARGET11.0_hf6cbfea6ea
+      ? osx_arm64_MACOSX_DEPLOYMENT_TARGET10.9cross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clang
+      : CONFIG: osx_arm64_MACOSX_DEPLOYMENT_TARGET10.9cross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clang
         UPLOAD_PACKAGES: 'True'
-      ? osx_64_MACOSX_DEPLOYMENT_TARGET11.0channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.55.0
-      : CONFIG: osx_64_MACOSX_DEPLOYMENT_TARGET11.0channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.55.0
-        UPLOAD_PACKAGES: 'True'
-      ? osx_arm64_MACOSX_DEPLOYMENT_TARGET10.9channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.55.0
-      : CONFIG: osx_arm64_MACOSX_DEPLOYMENT_TARGET10.9channel_targetsconda-forge_maincross_target_platformosx-64rust_archx86_64-apple-darwinrust_arch_envX86_64_APPLE_DARWINrust_default_ccx86_64-apple-darwin13.4.0-clangversion1.55.0
-        UPLOAD_PACKAGES: 'True'
-      ? osx_arm64_MACOSX_DEPLOYMENT_TARGET11.0channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.55.0
-      : CONFIG: osx_arm64_MACOSX_DEPLOYMENT_TARGET11.0channel_targetsconda-forge_maincross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clangversion1.55.0
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_MACOSX_DEPLOYMENT_TARGET1_h7fa8daf314:
-        CONFIG: osx_arm64_MACOSX_DEPLOYMENT_TARGET1_h7fa8daf314
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_MACOSX_DEPLOYMENT_TARGET1_hac91a0a317:
-        CONFIG: osx_arm64_MACOSX_DEPLOYMENT_TARGET1_hac91a0a317
+      ? osx_arm64_MACOSX_DEPLOYMENT_TARGET11.0cross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clang
+      : CONFIG: osx_arm64_MACOSX_DEPLOYMENT_TARGET11.0cross_target_platformosx-arm64rust_archaarch64-apple-darwinrust_arch_envAARCH64_APPLE_DARWINrust_default_ccarm64-apple-darwin20.0.0-clang
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
@@ -41,6 +29,11 @@ jobs:
       export OSX_FORCE_SDK_DOWNLOAD="1"
       export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
       export FEEDSTOCK_NAME=$(basename ${BUILD_REPOSITORY_NAME})
+      if [[ "${BUILD_REASON:-}" == "PullRequest" ]]; then
+        export IS_PR_BUILD="True"
+      else
+        export IS_PR_BUILD="False"
+      fi
       ./.scripts/run_osx_build.sh
     displayName: Run OSX build
     env:
