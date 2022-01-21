@@ -11,7 +11,7 @@ channel_targets:
 cross_target_platform:
 - linux-aarch64
 docker_image:
-- quay.io/condaforge/linux-anvil-ppc64le
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 rust_arch:
 - aarch64-unknown-linux-gnu
 rust_arch_env:
@@ -25,7 +25,7 @@ rust_default_cc_build:
 target_platform:
 - linux-ppc64le
 version:
-- 1.56.0
+- 1.58.0
 zip_keys:
 - - cross_target_platform
   - rust_arch
