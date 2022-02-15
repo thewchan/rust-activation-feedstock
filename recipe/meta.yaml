@@ -11,7 +11,7 @@ package:
   version: {{ version }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [cross_target_platform == "osx-arm64" and version == "1.46.0"]
 
 outputs:
