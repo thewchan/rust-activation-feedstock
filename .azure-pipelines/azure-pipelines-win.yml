@@ -8,8 +8,11 @@ jobs:
     vmImage: windows-2019
   strategy:
     matrix:
-      win_64_:
-        CONFIG: win_64_
+      win_64_channel_targetsconda-forge_main:
+        CONFIG: win_64_channel_targetsconda-forge_main
+        UPLOAD_PACKAGES: 'True'
+      win_64_channel_targetsconda-forge_rust_dev:
+        CONFIG: win_64_channel_targetsconda-forge_rust_dev
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:
