@@ -3,9 +3,9 @@ MACOSX_DEPLOYMENT_TARGET:
 MACOSX_SDK_VERSION:
 - '0'
 channel_sources:
-- conda-forge
+- conda-forge/label/rust_dev,conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge rust_dev
 cross_target_platform:
 - win-64
 rust_arch:
@@ -23,7 +23,7 @@ target_platform:
 vc:
 - '14'
 version:
-- 1.59.0
+- 1.62.0
 zip_keys:
 - - cross_target_platform
   - rust_arch

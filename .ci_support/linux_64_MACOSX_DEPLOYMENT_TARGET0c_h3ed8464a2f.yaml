@@ -5,27 +5,27 @@ MACOSX_SDK_VERSION:
 cdt_name:
 - cos6
 channel_sources:
-- conda-forge
+- conda-forge/label/rust_dev,conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge rust_dev
 cross_target_platform:
-- linux-ppc64le
+- linux-aarch64
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 rust_arch:
-- powerpc64le-unknown-linux-gnu
+- aarch64-unknown-linux-gnu
 rust_arch_env:
-- POWERPC64LE_UNKNOWN_LINUX_GNU
+- AARCH64_UNKNOWN_LINUX_GNU
 rust_arch_env_build:
 - X86_64_UNKNOWN_LINUX_GNU
 rust_default_cc:
-- powerpc64le-conda-linux-gnu-cc
+- aarch64-conda-linux-gnu-cc
 rust_default_cc_build:
 - x86_64-conda-linux-gnu-cc
 target_platform:
 - linux-64
 version:
-- 1.59.0
+- 1.62.0
 zip_keys:
 - - cross_target_platform
   - rust_arch
