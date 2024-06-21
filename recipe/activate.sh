@@ -18,6 +18,9 @@ if [[ "@cross_target_platform@" == linux*  ]]; then
   export CARGO_BUILD_RUSTFLAGS="-C link-arg=-Wl,-rpath-link,${PREFIX:-${CONDA_PREFIX}}/lib -C link-arg=-Wl,-rpath,${PREFIX:-${CONDA_PREFIX}}/lib"
 elif [[ "@cross_target_platform@" == osx* ]]; then
   export CARGO_BUILD_RUSTFLAGS="-C link-arg=-Wl,-rpath,${PREFIX:-${CONDA_PREFIX}}/lib"
+  if [[ "${CONDA_BUILD:-}" != "" ]]; then
+    export CARGO_BUILD_RUSTFLAGS="$CARGO_BUILD_RUSTFLAGS -C link-arg=-Wl,-headerpad_max_install_names -C link-arg=-Wl,-dead_strip_dylibs"
+  fi
 fi
 
 export PATH=${CARGO_HOME}/bin:${PATH}
